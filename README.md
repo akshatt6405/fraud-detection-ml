@@ -1,7 +1,7 @@
 # Credit Card Fraud Detection
 
 ML model to detect fraudulent credit card transactions 
-using Logistic Regression on real banking data.
+using Logistic Regression and Random Forest on real banking data.
 
 ## Dataset
 - 284,807 transactions
@@ -17,12 +17,19 @@ using Logistic Regression on real banking data.
 ## Tech Stack
 Python · Pandas · Scikit-learn · Matplotlib
 
+
 ## Results
 | Model | Precision | Recall | F1 |
 |-------|-----------|--------|----|
 | Logistic Regression | 0.84 | 0.69 | 0.76 |
+| LR Balanced | 0.05 | 0.92 | 0.10 |
+| Random Forest | 0.96 | 0.74 | 0.84 |
+| RF Depth=10 | 0.82 | 0.83 | 0.82 |
+
+## Key Finding
+V14 is the strongest fraud indicator — accounts for 18.6% of all model decisions.
 
 ## Next Steps
-- Random Forest model
-- Fix class imbalance
-- Improve recall above 0.80
+- XGBoost model
+- Push F1 above 0.85
+- Final model comparison
